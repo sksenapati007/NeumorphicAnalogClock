@@ -40,7 +40,7 @@ body.light .clock{
               inset 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.clock:before{
+.clock::before{
   content: '';
   position: absolute;
   width: 15px;
@@ -76,7 +76,7 @@ body.light .clock::before{
   /* align-items: center; */
 }
 
-.hr:before{
+.hr::before{
   content: '';
   position: absolute;
   width: 8px;
@@ -85,7 +85,7 @@ body.light .clock::before{
   z-index: 10;
   border-radius: 6px 6px 0 0;
 }
-.mn:before{
+.mn::before{
   content: '';
   position: absolute;
   width: 4px;
@@ -94,10 +94,10 @@ body.light .clock::before{
   z-index: 11;
   border-radius: 6px 6px 0 0;
 }
-body.light .mn:before{
+body.light .mn::before{
   background: #091921;
 }
-.sc:before{
+.sc::before{
   content: '';
   position: absolute;
   width: 4px;
@@ -106,26 +106,6 @@ body.light .mn:before{
   z-index: 12;
   border-radius: 6px 6px 0 0;
 }
-
-/* .toggle{
-  position: absolute;
-  top: 30px;
-  right: 100px;
-  width: 30px;
-  height: 30px;
-  background: url(sun.png);
-  color: #d1dae3;
-  transition: 0.5s;
-  display: flex;
-  align-items: center;
-}
-
-.toggle:before{
-  position: absolute;
-  content: 'Light Mode';
-  left: 40px;
-  white-space: nowrap;
-} */
 
 .toggleClass{
   position: absolute;
@@ -140,7 +120,7 @@ body.light .mn:before{
   align-items: center;
   color: #d1dae3;
 }
-.toggleClass:before{
+.toggleClass::before{
   position: absolute;
   left: 40px;
   content: 'Light Mode';
@@ -159,4 +139,7 @@ body.light .toggleClass{
   display: flex;
   align-items: center;
   color: #091921;
+}
+body.light .toggleClass::before{
+  content: 'Dark Mode';
 }
